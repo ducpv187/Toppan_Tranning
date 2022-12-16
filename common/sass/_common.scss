@@ -370,7 +370,7 @@ img {
 
 .outProducts-1 {
   background: url(./../image/bg-product.png) left top no-repeat;
-  background-size: contain;
+  background-size: 100% 100%;
   @include maxWidth(968px) {
     background: url(./../image/bg-product-mobile.png) left top no-repeat;
     background-size: contain;

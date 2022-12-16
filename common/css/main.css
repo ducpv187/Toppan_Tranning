@@ -780,7 +780,7 @@ img {
 /* line 371, ../sass/_common.scss */
 .outProducts-1 {
   background: url(./../image/bg-product.png) left top no-repeat;
-  background-size: contain;
+  background-size: 100% 100%;
 }
 @media only screen and (max-width: 968px) {
   /* line 371, ../sass/_common.scss */
