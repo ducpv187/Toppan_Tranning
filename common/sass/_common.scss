@@ -871,7 +871,7 @@ img {
   margin-bottom: 10rem;
   padding: 8rem 0;
   background-image: url(../../common/image/bg-co-creation.png);
-  background-size: 100% 100;
+  background-size: 100% 100%;
   @include maxWidth(968px) {
     background: url(../../common/image/bg-co-creation-mobile.png) left bottom
       no-repeat;
