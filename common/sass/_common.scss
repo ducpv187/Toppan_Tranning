@@ -1,11 +1,13 @@
 .slider {
   padding: 10rem 0 23rem 0;
-  background-image: url(/common/image/bg-top.png);
+  // background-image: url(/common/image/bg-top.png);
+  background-image: url(../image/bg-top.png);
   background-size: 100% 100%;
   margin-top: -6rem;
   position: relative;
   @include maxWidth(968px) {
-    background: url(/common/image/bg_mv.png) top center no-repeat;
+    // background: url(/common/image/bg_mv.png) top center no-repeat;
+    background: url(../image/bg_mv.png) top center no-repeat;
     background-size: 100% 100%;
     margin-top: -5rem;
     padding-bottom: 20rem !important;
