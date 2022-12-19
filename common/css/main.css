@@ -102,15 +102,15 @@ ul {
 }
 @font-face {
   font-family: NotoSansJP-Bold;
-  src: url(/common/fonts/NotoSansJP-Bold.otf);
+  src: url(../../common/fonts/NotoSansJP-Bold.otf);
 }
 @font-face {
   font-family: NotoSansJP-Regular;
-  src: url(/common/fonts/NotoSansJP-Regular.otf);
+  src: url(../../common/fonts/NotoSansJP-Regular.otf);
 }
 @font-face {
   font-family: Roboto-Bold;
-  src: url(/common/fonts/Roboto-Bold.ttf);
+  src: url(../../common/fonts/Roboto-Bold.ttf);
 }
 /* line 1, ../sass/_header.scss */
 header {
@@ -230,7 +230,7 @@ header .popupSearch .modal-content .modal-header .modal-title.text-center {
 }
 /* line 88, ../sass/_header.scss */
 header .popupSearch .modal-content .modal-header .btn-close {
-  background: url(/common/image/btn-close.png) center center no-repeat;
+  background: url(../../common/image/btn-close.png) center center no-repeat;
   background-size: contain;
   opacity: 1;
   transition: all 0.25s;
