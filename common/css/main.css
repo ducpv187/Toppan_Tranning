@@ -1570,7 +1570,7 @@ img {
   margin-bottom: 10rem;
   padding: 8rem 0;
   background-image: url(../../common/image/bg-co-creation.png);
-  background-size: contain;
+  background-size: 100% 100;
 }
 @media only screen and (max-width: 968px) {
   /* line 870, ../sass/_common.scss */
