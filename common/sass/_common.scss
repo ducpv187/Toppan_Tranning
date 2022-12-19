@@ -230,7 +230,7 @@ img {
         button.tablink.active_tab {
           @include maxWidth(968px) {
             font-weight: 700;
-            font-size: 1.6rem;
+            font-size: 1.5rem;
           }
         }
         .tablink:last-child {
