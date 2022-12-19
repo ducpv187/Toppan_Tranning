@@ -17,9 +17,6 @@ footer {
             font-family: NotoSansJP-Regular;
             font-weight: 100;
             color: $colorGreen-3;
-            @include maxWidth(968px) {
-              font-size: 2rem;
-            }
           }
         }
         &__right {
@@ -37,6 +34,9 @@ footer {
               margin-left: 3rem;
               font-size: 1.2rem;
               font-family: NotoSansJP-Regular;
+              @include maxWidth(968px) {
+               margin-bottom: 3rem;
+              }
             }
             a {
               text-decoration: none;
@@ -51,32 +51,25 @@ footer {
             margin-left: 0;
             @include maxWidth(968px) {
               width: 100%;
-              margin-bottom: 3rem;
-              font-size: 2rem;
             }
           }
           li:nth-child(2n + 1):not(:first-child) {
             @include maxWidth(968px) {
               width: 50%;
-              margin: 0;
-              margin-bottom: 3rem;
-              font-size: 2rem;
             }
           }
-          li:nth-child(2n + 2) {
+          li:nth-child(2n + 2) {            
+               margin-bottom: 3rem;
             @include maxWidth(968px) {
               width: 40%;
-              margin: 0;
-              margin-bottom: 3rem;
-              font-size: 2rem;
+              margin-left: 0;
             }
           }
           li:nth-child(2) {
-            margin-left: 0;
+            margin-bottom: 3rem;
             @include maxWidth(968px) {
               width: 30%;
-              margin-bottom: 3rem;
-              font-size: 2rem;
+              margin-left: 0;
             }
           }
         }
