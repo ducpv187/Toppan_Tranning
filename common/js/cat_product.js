@@ -129,6 +129,8 @@ const category = [
 
 
 //write data in html 
+// --> Note: su dụng forEach jquery để đổ data vào Html (section outProducts )
+// --> Note: Lưu ý về việc sử dụng template string `` --> Mục đích : có thể sư dụng ddc $
 $.each(category, function( index, value ) {
   // console.log(value.category);
   let html = `
