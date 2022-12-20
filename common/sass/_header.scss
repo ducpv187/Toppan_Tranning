@@ -97,6 +97,9 @@ header {
       .modal-body {
         width: 100%;
         margin-top: 3rem;
+        @include maxWidth(968px) {
+         overflow-x: hidden;
+        }
       }
     }
     .boxSearch {
