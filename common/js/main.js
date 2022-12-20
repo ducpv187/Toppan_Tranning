@@ -77,26 +77,25 @@ document.getElementById('defaultOpen').click();
 document.getElementById('defaultOpen-2').click();
 // scroll to top of page
 $(document).ready(function () {
-  $(function () {
-    //Dectech scroll show hide Arrrow
-    $(window).scroll(function () {
-      var scrolled = $(window).scrollTop();
-      if (scrolled > 300) {
-        $('.js-top').fadeIn();
-      }
-      
-      if (scrolled < 300) {
-        $('.js-top').fadeOut();
-      }
-      //console.log(scrolled);
-    });
-
-    //Click event scroll  back to Top
-    $('.js-top').click(function () {
-      $('html, body').animate({ scrollTop: '0' }, 500);
-      return false;
-    });
+  //Dectech scroll show hide Arrrow
+  $(window).scroll(function () {
+    var scrolled = $(window).scrollTop();
+    if (scrolled > 300) {
+      $('.js-top').fadeIn();
+    }
+    
+    if (scrolled < 300) {
+      $('.js-top').fadeOut();
+    }
+    //console.log(scrolled);
   });
+
+  //Click event scroll  back to Top
+  $('.js-top').click(function () {
+    $('html, body').animate({ scrollTop: '0' }, 500);
+    return false;
+  });
+  console.log(category);
 });
 /// SLIDER
 var slideIndex = 1;
