@@ -1,10 +1,10 @@
 //next tab
 function openPage(pageName, elmnt, color, classParent) {
-  console.log({ pageName, elmnt, color,classParent });
+  // console.log({ pageName, elmnt, color,classParent });
 
   var i, tabcontent, tablinks;
   tabcontent = document.querySelectorAll(`.${classParent} .tabcontent`);
-  console.log(tabcontent);
+  // console.log(tabcontent);
   for (i = 0; i < tabcontent.length; i++) {
     tabcontent[i].style.display = 'none';
   }
@@ -26,10 +26,10 @@ function openPage(pageName, elmnt, color, classParent) {
   //when element seclect -> color has #0c4947
   elmnt.style.color = '#0c4947';
   // reset padding nho
-  $(`.${classParent} .tablink`).css('padding', '1.6rem 0.6rem');
+  $(`.${classParent} .tablink`).css('padding', '1.5rem 0.6rem');
   // console.log(`.${classParent} .tablink`);
   //who is active -> Padding big
-  elmnt.style.padding = '2rem 0.6rem';
+  elmnt.style.padding = '1.8rem 0.6rem';
   //activeTab  
   if (pageName == 'ProductType') {
     $(`.${classParent} .tab`).click(function(){
@@ -51,6 +51,25 @@ function openPage(pageName, elmnt, color, classParent) {
       $(this).find(".tablink ").removeClass('activeBefore');
     });
   }
+// hover remove before afer
+  $(document).ready(function(){
+    let $tab2 = '.outProducts .row__bottom .tab .tablink-2';
+    // console.log(tabTwo);
+    if (pageName == 'ProductType') {
+      $($tab2).hover(function(){
+        $(this).parent().find(".tablink-3").addClass("clear");
+        }, function(){
+        $(this).parent().find(".tablink-3").removeClass("clear");
+      });       
+    }
+    else if(pageName == 'Purpose'){
+      $($tab2).hover(function(){
+        $(this).parent().find(".tablink-1").addClass("clear");
+        }, function(){
+        $(this).parent().find(".tablink-1").removeClass("clear");
+      });   
+    }
+  });
 //tablink
 }
 // Get the element with id="defaultOpen" and click on it

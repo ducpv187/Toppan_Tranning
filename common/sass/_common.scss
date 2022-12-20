@@ -169,6 +169,7 @@ img {
   }
   .row {
     width: 100%;
+    margin: 0 auto;
     &__top {
       width: 100%;
       h1 {
@@ -204,6 +205,9 @@ img {
       }
     }
     &__bottom {
+      @include maxWidth(968px) {
+       padding: 0;
+      }
       .row {
         margin: 0 auto;
       }
@@ -230,7 +234,7 @@ img {
         button.tablink.active_tab {
           @include maxWidth(968px) {
             font-weight: 700;
-            font-size: 1.5rem;
+            font-size: 1.25rem;
           }
         }
         .tablink:last-child {
@@ -265,13 +269,13 @@ img {
           transition: all 0.5s;
         }
         .tablink-1:hover {
-          padding: 2rem 0.6rem !important;
+          padding: 1.8rem 0.6rem !important;
         }
         .tablink-2:hover {
-          padding: 2rem 0.6rem !important;
+          padding: 1.8rem 0.6rem !important;
         }
         .tablink-3:hover {
-          padding: 2rem 0.6rem !important;
+          padding: 1.8rem 0.6rem !important;
         }
       }
       .tabcontent {     
@@ -372,7 +376,7 @@ img {
   background-size: 100% 100%;
   @include maxWidth(968px) {
     background: url(../../common/image/bg-product-mobile.png) left top no-repeat;
-    background-size: contain;
+    background-size: 100% 100%;
   }
 }
 #Home {
@@ -1046,15 +1050,15 @@ img {
       @extend .wrap;      
       &--text {
         width: 100%;
-        font-size: 1.6rem;
         margin-bottom: 3rem;
-        font-weight: bold;
         color: $colorBlack;       
         @include maxWidth(991px) {
-         text-align: center;
+          text-align: center;
         } 
         h3 {
           margin: 0;
+          font-weight: bold;
+          font-size: 1.6rem;
         }
       }
       &--col {        
@@ -1080,8 +1084,6 @@ img {
       &--text {
         width: 100%;
         padding: 0 1rem;
-        font-size: 1.6rem;
-        font-family: NotoSansJP-Regular;
         margin-bottom: 3rem;
         font-weight: bold;
         color: $colorBlack;
@@ -1090,6 +1092,8 @@ img {
         }
         h3 {
           margin: 0;
+          font-size: 1.6rem;       
+          font-weight: bold;
         }
       }
       &--col {
@@ -1174,4 +1178,18 @@ img {
 }
 .outProducts .row__bottom .tab .activeAfter.tablink:last-child::after {
   display: none;
+}
+.outProducts .row__bottom .tab .clear.tablink:last-child::after{
+ background-color: transparent;
+}
+.outProducts .row__bottom .tab .clear.tablink:first-child::before {
+  background-color: transparent;
+}
+.outProducts-2 {
+  .container {
+    @include maxWidth(968px) {
+      padding-left: 0.5rem !important;
+      padding-right: 0.5rem !important;
+    }
+  }
 }
