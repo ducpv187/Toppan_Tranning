@@ -165,8 +165,19 @@ $(document).ready(function(){
       //  console.log(valueInput);    
       //filter value in array --> find value in array      
       let valueShow = category.filter(value => value.title.includes(valueInput));
-      // console.log(valueShow);
+      console.log(valueShow);
       $.each(valueShow, function( index, value ) {
+        if (Array.isArray(valueShow) && valueShow.length){
+          console.log('hihi')
+        }
+        else {
+          console.log('a')
+        }
+        // console.log(Array.isArray(valueShow) && valueShow.length);
+        // else {
+        //   console.log('ko co');
+        // }
+        // console.log(valueShow.length);
         // console.log(value.category);
         let html = `
           <div class="col col-4 col-sm-4 product-box" id="search-${value.id}">
@@ -188,6 +199,6 @@ $(document).ready(function(){
         else if(value.category == 'Purpose'){
           $("#Purpose .row").append(html);
         }
-      }); 
+       }); 
   });
 });
