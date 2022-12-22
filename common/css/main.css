@@ -424,7 +424,7 @@ header .popupSearch .search-form__input {
   min-width: 100%;
   border-radius: 5rem;
   padding-left: 3rem;
-  padding-right: 8rem;
+  padding-right: 3rem;
 }
 /* line 135, ../sass/_header.scss */
 header .popupSearch .search-form__btn {
@@ -437,6 +437,8 @@ header .popupSearch .search-form__btn {
   top: 50%;
   right: 3rem;
   transform: translateY(-50%);
+  z-index: 9999;
+  background-color: #fff;
 }
 
 /* line 1, ../sass/_common.scss */

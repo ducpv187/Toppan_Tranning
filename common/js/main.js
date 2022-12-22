@@ -95,7 +95,7 @@ $(document).ready(function () {
     $('html, body').animate({ scrollTop: '0' }, 500);
     return false;
   });
-  console.log(category);
+  // console.log(category);
 });
 /// SLIDER
 var slideIndex = 1;
