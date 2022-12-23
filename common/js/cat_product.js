@@ -127,6 +127,29 @@ const category = [
   }
 ];
 
+// call url data api ajax
+$.ajax({
+  type: "GET",
+  url: 'https://63a56082318b23efa791bf88.mockapi.io/api/products',
+  data: "check",
+  success: function(data){
+     console.log(data);
+  }
+});
+
+// call api ajax
+// var requestOptions = {
+//   method: 'GET',
+//   redirect: 'follow'
+// };
+
+// fetch("https://63a56082318b23efa791bf88.mockapi.io/api/products", requestOptions)
+//   .then(response => response.text())
+//   .then(result => console.log(result))
+//   .catch(error => console.log('error', error));
+
+
+
 $(document).ready(function(){  
 //write data in html 
 // --> Note: su dụng forEach jquery để đổ data vào Html (section outProducts )
@@ -167,7 +190,7 @@ $(document).ready(function(){
       let valueShow = category.filter(value => value.title.includes(valueInput));
         console.log(valueShow);
       if (valueShow.length > 0){
-      $.each(valueShow, function( index, value ) {                       
+        $.each(valueShow, function( index, value ) {                       
         let html = `
           <div class="col col-4 col-sm-4 product-box" id="search-${value.id}">
             <div class="icon-box">
