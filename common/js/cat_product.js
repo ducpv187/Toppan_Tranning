@@ -165,20 +165,9 @@ $(document).ready(function(){
       //  console.log(valueInput);    
       //filter value in array --> find value in array      
       let valueShow = category.filter(value => value.title.includes(valueInput));
-      console.log(valueShow);
-      $.each(valueShow, function( index, value ) {
-        if (Array.isArray(valueShow) && valueShow.length){
-          console.log('hihi')
-        }
-        else {
-          console.log('a')
-        }
-        // console.log(Array.isArray(valueShow) && valueShow.length);
-        // else {
-        //   console.log('ko co');
-        // }
-        // console.log(valueShow.length);
-        // console.log(value.category);
+        console.log(valueShow);
+      if (valueShow.length > 0){
+      $.each(valueShow, function( index, value ) {                       
         let html = `
           <div class="col col-4 col-sm-4 product-box" id="search-${value.id}">
             <div class="icon-box">
@@ -190,15 +179,27 @@ $(document).ready(function(){
               </div>
             </div>
           </div>`;
-        if(value.category == 'ProductType'){    
-          $("#ProductType .row").append(html);
-        }
-        else if(value.category == 'Industry'){
-          $("#Industry .row").append(html);
-        }
-        else if(value.category == 'Purpose'){
-          $("#Purpose .row").append(html);
-        }
-       }); 
+          if(value.category == 'ProductType'){    
+            $("#ProductType .row").append(html);
+          }
+          else if(value.category == 'Industry'){
+            $("#Industry .row").append(html);
+          }
+          else if(value.category == 'Purpose'){
+            $("#Purpose .row").append(html);
+          }
+        }); 
+      }
+      else {
+        let htmlError = 
+        `<div class="col product-box">
+            <div class="icon-box">
+              <div class="icon-box-text">          
+                <p class="title">Not Found Items</p>
+              </div>
+            </div>
+        </div>`;
+        $(".outProducts-2 .tabcontent .row").append(htmlError);
+      }    
   });
 });
