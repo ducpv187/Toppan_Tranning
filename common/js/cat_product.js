@@ -131,31 +131,31 @@ $(document).ready(function(){
 //write data in html 
 // --> Note: su dụng forEach jquery để đổ data vào Html (section outProducts )
 // --> Note: Lưu ý về việc sử dụng template string `` --> Mục đích : có thể sư dụng ddc $
-  // $.each(category, function( index, value ) {
-  //   // console.log(value.category);
-  //   let html = `
-  //     <div class="col col-4 col-sm-4 product-box" id="search-${value.id}">
-  //       <div class="icon-box">
-  //         <div class="icon-box-img">
-  //           <img src="${value.img}" alt="${value.title}" class="img-fluid"/>
-  //         </div>
-  //         <div class="icon-box-text">          
-  //           <p class="title">${value.title}</p>
-  //         </div>
-  //       </div>
-  //     </div>`;
-  //   if(value.category == 'ProductType'){    
-  //     $("#ProductType .row").append(html);
-  //     // console.log(html);
-  //     // console.log('ProductType');
-  //   }
-  //   else if(value.category == 'Industry'){
-  //     $("#Industry .row").append(html);
-  //   }
-  //   else if(value.category == 'Purpose'){
-  //     $("#Purpose .row").append(html);
-  //   }
-  // }); 
+  $.each(category, function( index, value ) {
+    // console.log(value.category);
+    let html = `
+      <div class="col col-4 col-sm-4 product-box" id="search-${value.id}">
+        <div class="icon-box">
+          <div class="icon-box-img">
+            <img src="${value.img}" alt="${value.title}" class="img-fluid"/>
+          </div>
+          <div class="icon-box-text">          
+            <p class="title">${value.title}</p>
+          </div>
+        </div>
+      </div>`;
+    if(value.category == 'ProductType'){    
+      $("#ProductType .row").append(html);
+      // console.log(html);
+      // console.log('ProductType');
+    }
+    else if(value.category == 'Industry'){
+      $("#Industry .row").append(html);
+    }
+    else if(value.category == 'Purpose'){
+      $("#Purpose .row").append(html);
+    }
+  }); 
  
   //get data input 
   $("#btn_search").click(function(){
