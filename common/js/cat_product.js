@@ -122,19 +122,15 @@
 // ];
 
 //C1: call url data api ajax
-//  var categorys = [];
+
 $.ajax({
     type: "GET",
     url: 'https://63a56082318b23efa791bf88.mockapi.io/api/products',
     data: {"data":"check"},
     success: function(data){
-      eachData(data);
-      // console.log(data);
+      eachData(data);      
     }
   });
-  // console.log(categorys)
-
-
 
 // C2: call api fetch
 // var requestOptions = {
