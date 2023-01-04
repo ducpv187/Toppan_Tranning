@@ -128,6 +128,7 @@ $.ajax({
     url: 'https://63a56082318b23efa791bf88.mockapi.io/api/products',
     data: {"data":"check"},
     success: function(data){
+      console.log(data)
       eachData(data);      
     }
   });
@@ -171,16 +172,21 @@ $.ajax({
       }
     }); 
      
-  //get data input 
-  $("#btn_search").click(function(){
+    //get data input 
+    $("#btn_search").click(function(){
       let valueInput = $('#input_search').val(); 
       // console.log(valueInput)
       let classEmty = '.outProducts.outProducts-2 .row__bottom .tabcontent .row';      
       $(classEmty).empty();
       //  console.log(valueInput);    
       //filter value in array --> find value in array      
-      let valueShow = data.filter(value => value.title.includes(valueInput));
-        // console.log(valueShow);
+      //c1: viet arrown function =>
+      // let valueShow = data.filter(value => value.title.includes(valueInput));
+      //c2: viet declartion function
+      let valueShow = data.filter( function(value){
+        return value.title.includes(valueInput);
+      });
+        console.log(valueShow);
       if (valueShow.length > 0){
         $.each(valueShow, function( index, value ) {                       
         let html = `
