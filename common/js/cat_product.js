@@ -227,77 +227,77 @@ const category = [
 
 
 /// ------------------- Phần dưới này để đổ DATA fix cứng -----------
-// $(document).ready(function(){  
-// // write data in html 
-// // --> Note: su dụng forEach jquery để đổ data vào Html (section outProducts )
-// // --> Note: Lưu ý về việc sử dụng template string `` --> Mục đích : có thể sư dụng ddc $
-//   $.each(category, function( index, value ) {
-//     // console.log(value.category);
-//     let html = `
-//       <div class="col col-4 col-sm-4 product-box" id="search-${value.id}">
-//         <div class="icon-box">
-//           <div class="icon-box-img">
-//             <img src="${value.img}" alt="${value.title}" class="img-fluid"/>
-//           </div>
-//           <div class="icon-box-text">          
-//             <p class="title">${value.title}</p>
-//           </div>
-//         </div>
-//       </div>`;
-//     if(value.category == 'ProductType'){    
-//       $("#ProductType .row").append(html);
-//     }
-//     else if(value.category == 'Industry'){
-//       $("#Industry .row").append(html);
-//     }
-//     else if(value.category == 'Purpose'){
-//       $("#Purpose .row").append(html);
-//     }
-//   }); 
+$(document).ready(function(){  
+// write data in html 
+// --> Note: su dụng forEach jquery để đổ data vào Html (section outProducts )
+// --> Note: Lưu ý về việc sử dụng template string `` --> Mục đích : có thể sư dụng ddc $
+  $.each(category, function( index, value ) {
+    // console.log(value.category);
+    let html = `
+      <div class="col col-4 col-sm-4 product-box" id="search-${value.id}">
+        <div class="icon-box">
+          <div class="icon-box-img">
+            <img src="${value.img}" alt="${value.title}" class="img-fluid"/>
+          </div>
+          <div class="icon-box-text">          
+            <p class="title">${value.title}</p>
+          </div>
+        </div>
+      </div>`;
+    if(value.category == 'ProductType'){    
+      $("#ProductType .row").append(html);
+    }
+    else if(value.category == 'Industry'){
+      $("#Industry .row").append(html);
+    }
+    else if(value.category == 'Purpose'){
+      $("#Purpose .row").append(html);
+    }
+  }); 
  
-//   //get data input 
-//   $("#btn_search").click(function(){
-//       let valueInput = $('#input_search').val(); 
-//       let classEmty = '.outProducts.outProducts-2 .row__bottom .tabcontent .row';      
-//       $(classEmty).empty();
-//       //  console.log(valueInput);    
-//       //filter value in array --> find value in array      
-//       let valueShow = category.filter(value => value.title.includes(valueInput));
-//         console.log(valueShow);
-//       if (valueShow.length > 0){
-//         $.each(valueShow, function( index, value ) {                       
-//         let html = `
-//           <div class="col col-4 col-sm-4 product-box" id="search-${value.id}">
-//             <div class="icon-box">
-//               <div class="icon-box-img">
-//                 <img src="${value.img}" alt="${value.title}" class="img-fluid"/>
-//               </div>
-//               <div class="icon-box-text">          
-//                 <p class="title">${value.title}</p>
-//               </div>
-//             </div>
-//           </div>`;
-//           if(value.category == 'ProductType'){    
-//             $("#ProductType .row").append(html);
-//           }
-//           else if(value.category == 'Industry'){
-//             $("#Industry .row").append(html);
-//           }
-//           else if(value.category == 'Purpose'){
-//             $("#Purpose .row").append(html);
-//           }
-//         }); 
-//       }
-//       else {
-//         let htmlError = 
-//         `<div class="col product-box">
-//             <div class="icon-box">
-//               <div class="icon-box-text">          
-//                 <p class="title">Not Found Items</p>
-//               </div>
-//             </div>
-//         </div>`;
-//         $(".outProducts-2 .tabcontent .row").append(htmlError);
-//       }    
-//   });
-// });
+  //get data input 
+  $("#btn_search").click(function(){
+      let valueInput = $('#input_search').val(); 
+      let classEmty = '.outProducts.outProducts-2 .row__bottom .tabcontent .row';      
+      $(classEmty).empty();
+       console.log(valueInput);    
+      //filter value in array --> find value in array      
+      let valueShow = category.filter(value => value.title.includes(valueInput));
+        // console.log(valueShow);
+      if (valueShow.length > 0){
+        $.each(valueShow, function( index, value ) {                       
+        let html = `
+          <div class="col col-4 col-sm-4 product-box" id="search-${value.id}">
+            <div class="icon-box">
+              <div class="icon-box-img">
+                <img src="${value.img}" alt="${value.title}" class="img-fluid"/>
+              </div>
+              <div class="icon-box-text">          
+                <p class="title">${value.title}</p>
+              </div>
+            </div>
+          </div>`;
+          if(value.category == 'ProductType'){    
+            $("#ProductType .row").append(html);
+          }
+          else if(value.category == 'Industry'){
+            $("#Industry .row").append(html);
+          }
+          else if(value.category == 'Purpose'){
+            $("#Purpose .row").append(html);
+          }
+        }); 
+      }
+      else {
+        let htmlError = 
+        `<div class="col product-box">
+            <div class="icon-box">
+              <div class="icon-box-text">          
+                <p class="title">Not Found Items</p>
+              </div>
+            </div>
+        </div>`;
+        $(".outProducts-2 .tabcontent .row").append(htmlError);
+      }    
+  });
+});
