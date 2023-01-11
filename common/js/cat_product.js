@@ -171,9 +171,8 @@ $.ajax({
         $("#Purpose .row").append(html);
       }
     }); 
-     
     // get data input 
-    $("#btn_search").click(function(){
+    $("#btn_search").click(function(){  
       let valueInput = $('#input_search').val(); 
       // console.log(valueInput)
       let classEmty = '.outProducts.outProducts-2 .row__bottom .tabcontent .row';      
@@ -186,7 +185,7 @@ $.ajax({
       let valueShow = data.filter( function(value){
         return value.title.includes(valueInput);
       });
-        console.log(valueShow);
+        // console.log(valueShow);
       if (valueShow.length > 0){
         $.each(valueShow, function( index, value ) {                       
         let html = `
@@ -221,9 +220,11 @@ $.ajax({
             </div>
         </div>`;
         $(".outProducts-2 .tabcontent .row").append(htmlError);
-      }    
+      }                 
     });
   }
+
+ 
 
 
 /// ------------------- Phần dưới này để đổ DATA fix cứng -----------
