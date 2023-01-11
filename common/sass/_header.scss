@@ -144,6 +144,9 @@ header {
         transform: translateY(-50%);
         z-index: 9999;
         background-color: transparent;
+        @include maxWidth(968px) {
+          right: 2.5rem;
+         }
       }
     }
   }

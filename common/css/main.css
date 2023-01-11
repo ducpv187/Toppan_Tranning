@@ -393,6 +393,11 @@ header .popupSearch .search-form__btn {
   z-index: 9999;
   background-color: transparent;
 }
+@media only screen and (max-width: 968px) {
+  header .popupSearch .search-form__btn {
+    right: 2.5rem;
+  }
+}
 
 .slider {
   padding: 10rem 0 23rem 0;
